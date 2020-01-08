@@ -1,0 +1,27 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCYh5KgeDZAkqAy2-_XtPjhQNv1A7GwHO4",
+    authDomain: "agritech-85d86.firebaseapp.com",
+    databaseURL: "https://agritech-85d86.firebaseio.com",
+    projectId: "agritech-85d86",
+    storageBucket: "agritech-85d86.appspot.com",
+    messagingSenderId: "639376753018",
+    appId: "1:639376753018:web:6deabc2926acf8273316c3",
+    measurementId: "G-5MB01S2B4Z"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+
+
