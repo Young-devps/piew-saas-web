@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
-import {error} from 'selenium-webdriver';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +14,7 @@ export class AuthService {
       (resolve, reject) => {
         firebase.auth().createUserWithEmailAndPassword(email, password).then(
           () => {
-            resolve();
+            resolve(true);
           },
           // tslint:disable-next-line:no-shadowed-variable
           (error) => {
@@ -31,7 +30,7 @@ export class AuthService {
       (resolve, reject) => {
         firebase.auth().signInWithEmailAndPassword(email, password).then(
           () => {
-            resolve();
+            resolve(true);
           },
           // tslint:disable-next-line:no-shadowed-variable
           (error) => {
@@ -47,7 +46,7 @@ export class AuthService {
       (resolve, reject) => {
         firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(
           () => {
-            resolve();
+            resolve(true);
           },
           // tslint:disable-next-line:no-shadowed-variable
           (error) => {
