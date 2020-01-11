@@ -38,7 +38,7 @@ CoreUI is meant to be the UX game changer. Pure & transparent code is devoid of 
   - [Versions](#versions)
   - [CoreUI Pro](#coreui-pro)
   - [Admin Templates built on top of CoreUI Pro](#admin-templates-built-on-top-of-coreui-pro)
-      - [Prerequisites](#prerequisites)
+  	- [Prerequisites](#prerequisites)
           - [Node.js](#nodejs)
           - [Angular CLI](#angular-cli)
         - [Update to Angular 8](#update-to-angular-8)
@@ -166,7 +166,7 @@ See [the Releases section of our project](https://github.com/coreui/coreui-free-
 
 * <https://twitter.com/lukaszholeczek>
 * <https://github.com/mrholek>
-
+* <https://github.com/young-devps>
 **Andrzej Kopański**
 
 * <https://github.com/xidedix>
