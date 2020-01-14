@@ -10,6 +10,7 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { ResetpasswordComponent } from './views/resetpassword/resetpassword.component';
 
 export const routes: Routes = [
   
@@ -44,6 +45,13 @@ export const routes: Routes = [
     component: RegisterComponent,
     data: {
       title: 'Register Page'
+    }
+  },
+  {
+    path: 'reset-password',
+    component: ResetpasswordComponent,
+    data: {
+      title: 'Reset Password Page'
     }
   },
   {
