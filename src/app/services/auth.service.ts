@@ -57,6 +57,14 @@ export class AuthService {
     );
   }
 
+
+  resetPassword(email: string) {
+    const auth = firebase.auth();
+    return auth.sendPasswordResetEmail(email)
+      .then(() => console.log('email sent'))
+      .catch((error) => console.log(error));
+  }
+
   signOutUser() {
     firebase.auth().signOut();
   }

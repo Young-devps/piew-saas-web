@@ -1,26 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {AuthService} from '../../services/auth.service';
 
 
 @Component({
-  selector: 'app-resetpassword',
+  selector: 'app-dashboard',
   templateUrl: './resetpassword.component.html',
   styleUrls: ['./resetpassword.component.css']
 })
 export class ResetpasswordComponent implements OnInit {
 
-  constructor() { }
+  resetForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder, private authService: AuthService) { }
 
   ngOnInit() {
+    this.initForm();
+  }
+
+  initForm() {
+    this.resetForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]]
+    });
   }
 
   email = new FormControl('', [Validators.required, Validators.email]);
-  hide = true;
 
   getErrorMessage() {
     return this.email.hasError('required') ? 'You must enter a value' :
         this.email.hasError('email') ? 'Not a valid email' :
             '';
+  }
+
+  onSubmit () {
+    const email = this.resetForm.get('email').value;
+
+    this.authService.resetPassword(email);
   }
 
 }
