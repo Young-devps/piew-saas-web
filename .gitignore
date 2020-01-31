@@ -43,3 +43,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+# src
+/agritech-85d86-firebase-adminsdk-vulz1-35be034234.json
